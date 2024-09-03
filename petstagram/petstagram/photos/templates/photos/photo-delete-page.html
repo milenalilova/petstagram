@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <!-- Starts Delete Photo Section -->
+    <div class="edit-delete edit-photo">
+        <h2>Delete photo</h2>
+
+        <!-- Starts Delete Photo Form -->
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <!-- Delete Photo Button -->
+            <button class="edit-btn" type="submit">Delete Photo</button>
+        </form>
+        <!-- End Delete Photo Form -->
+
+    </div>
+    <!-- End Delete Photo Section -->
+
+{% endblock %}
